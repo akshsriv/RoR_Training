@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :friends
-  get 'home/index'
-  root 'home#index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "posts#index"
+  #get 'home/index'
+  get 'home/about'
+  #root 'home#index'
+  root 'friends#index'
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
